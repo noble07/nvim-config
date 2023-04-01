@@ -9,5 +9,5 @@ This is my personal config for nvim, is using the LUA RTP file structure
 - Rose Pine (Color Scheme)
 - Treesitter (Highlighter)
 - Harpoon (File navigations shortcut)
-- Undotree (Undu file history)
+- Undotree (Undo file history)
 - Fugitive (Git integration)
