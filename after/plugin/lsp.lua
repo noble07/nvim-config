@@ -2,8 +2,7 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-  'tsserver',
+lsp.ensure_installed({ 'tsserver',
 })
 
 -- Fix Undefined global 'vim'
@@ -35,8 +34,8 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'luasnip'},
     mapping = {
-      ['<Tab>'] = cmp_action.luasnip_supertab(),
-      ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+      ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+      ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     }
   }
 })
