@@ -40,9 +40,16 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use 'folke/tokyonight.nvim'
   -- Snippets
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
+  use {
+    'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
+  --
+  use 'lukas-reineke/indent-blankline.nvim'
+  use 'rebelot/kanagawa.nvim'
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
 end)
-
