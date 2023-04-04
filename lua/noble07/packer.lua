@@ -11,14 +11,11 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
-  vim.cmd('colorscheme rose-pine')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
@@ -39,11 +36,13 @@ return require('packer').startup(function(use)
 	  {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
-
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-
+  use 'folke/tokyonight.nvim'
+  -- Snippets
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 end)
 
